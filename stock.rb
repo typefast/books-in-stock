@@ -3,7 +3,16 @@ class BookInStock
     @isbn = isbn
     @price = Float(price)
   end
+  
+  def to_s
+    "ISBN: #{@isbn}, price: #{@price}"
+  end
 end
 
-a_book = BookInStock.new
-another_book = BookInStock.new
+b1 = BookInStock.new("isbn1", 3)
+b2 = BookInStock.new("isbn2", 3.14)
+b3 = BookInStock.new("isbn3", "5.67")
+
+puts b1
+puts b2
+puts b3
